@@ -31,5 +31,5 @@ jobs:
           USERNAME: ${{ github.actor }}
       - name: print environment name
         run: |
-          echo Deployed code to ${{ github.event.inputs.env_name }} >> ${{ GITHUB_STEP_SUMMARY }}
+          echo Deployed code to ${{ github.event.inputs.env_name }} >> $GITHUB_STEP_SUMMARY
  
