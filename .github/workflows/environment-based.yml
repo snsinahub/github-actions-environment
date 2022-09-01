@@ -1,0 +1,32 @@
+name: Environment name
+on:
+  workflow_dispatch:
+    inputs:
+      env_name:
+        required: true
+        type: choice
+        options:
+        - DEV
+        - QA
+        - PR
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    environment: ${{ github.event.inputs.env_name }}
+    steps:
+      - name: checkout
+        uses: actions/checkout@v3
+      - uses: actions/setup-java@v3
+        with:
+          java-version: '8'
+          distribution: 'adopt'
+      - name: pack
+        run: |
+          mvn clean package
+        env:
+          S_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          USERNAME: ${{ github.actor }}
+      - name: print environment name
+        run: |
+          echo ${{ github.event.inputs.env_name }}
+ 
