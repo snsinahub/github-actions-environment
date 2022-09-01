@@ -52,9 +52,12 @@ In action run details page click on `review deployment (if you are a reviewer) -
 
 If you approve the request then action will be triggered and if you reject it then action's run will be cancelled.
 
+You will see a `Deployment reviews` box below action run
+
 ![image](https://user-images.githubusercontent.com/90400593/188018132-ff51b47c-54cd-49a7-af5f-696d2de4d433.png)
 ![image](https://user-images.githubusercontent.com/90400593/188018157-e7609f4f-bd81-4085-85d5-76e4ea530625.png)
 ![image](https://user-images.githubusercontent.com/90400593/188018353-ddc6fdf3-16b8-422e-8586-2350e528a155.png)
+![image](https://user-images.githubusercontent.com/90400593/188018759-e0006236-fcdf-4d4e-9435-f588c7fd2912.png)
 
 
 
